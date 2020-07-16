@@ -1,0 +1,678 @@
+@import url(variables.css);
+/* or using url is @import url("variables.css") */
+@import url("https://fonts.googleapis.com/css?family=Courgette|Montserrat&display=swap");
+body {
+  margin: 0px; }
+
+main {
+  font-family: 'Courgette', cursive;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /*start of the design of the musicgenres page*/
+  /*end of the design of the musicgenres page*/
+  /*start of contact page*/
+  /*end of contact page*/
+  /*start of prduct description*/
+  /*end of prduct description*/ }
+  main header nav {
+    background-color: var(--main-purple-color);
+    color: var(--text-light-grey);
+    height: 100px;
+    grid-column: 1 / -1; }
+    main header nav ul {
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      align-items: center;
+      justify-items: center;
+      margin: 0px;
+      /*default padding and margin of ul*/
+      padding: 16px 0px 0px 0px; }
+      main header nav ul li {
+        display: inline;
+        padding: 10px 20px;
+        background-color: var(--lignt-bk-grey);
+        color: var(--text-purple); }
+        main header nav ul li:nth-child(5) {
+          grid-column: 5 / span 3; }
+        main header nav ul li:nth-child(5) form {
+          width: 300px;
+          background-color: transparent; }
+          main header nav ul li:nth-child(5) form button {
+            background-color: #dbdbdb;
+            border: 1px solid #610032;
+            border-radius: 10px; }
+        main header nav ul li:nth-child(5) form input {
+          background-color: var(--lignt-bk-grey);
+          border: 0px;
+          height: 35px;
+          width: 200px;
+          color: #610032; }
+        main header nav ul li:nth-child(5) form .headersrchIcon {
+          color: var(--main-purple-color);
+          margin-left: 20px; }
+        main header nav ul li:last-child {
+          margin-left: 10px; }
+        main header nav ul li:hover {
+          background-color: #151515;
+          color: #fff; }
+        main header nav ul li:active {
+          background-color: #414141;
+          color: #fff; }
+      main header nav ul .navLogo {
+        background-color: transparent; }
+        main header nav ul .navLogo .logoImage {
+          width: 50px;
+          background-color: transparent; }
+        main header nav ul .navLogo:hover {
+          background-color: transparent; }
+  main .bannerD {
+    grid-column: 1 / -1;
+    position: relative;
+    animation: slide 10s infinite;
+    width: 500%;
+    /*#prnt{
+        position:fixed;
+        top:200px;
+        right:0px;
+        border-radius: 10px 0px 0px 10px;
+        border-right:0px;
+        //width:200px;
+        #colorIcon{
+            cursor:pointer;
+            color:#2B2D2F;
+        }
+        #child1{
+            height:40px;
+            width:30px;
+            background-color: #084414;
+            border:2px solid  solid #DBDBDB;
+            border-right:0px;
+            border-radius: 10px 0px 0px 10px;
+            cursor:pointer;
+            display:none;
+        }
+        #child2{
+            height:40px;
+            width:30px;
+            background-color:#49323F;
+            border-right:0px;
+            border:2px solid  solid #DBDBDB;
+            border-right:0px;
+            border-radius: 10px 0px 0px 10px;
+            cursor:pointer;
+            display:none;
+        }
+        &:hover #child1, &:hover #child2{
+            display:block;
+        }  
+    }*/ }
+  main .bannerImage {
+    width: 20%;
+    height: 653px;
+    float: left; }
+  main .bannreUpperColor {
+    width: 100%;
+    height: 653px;
+    position: absolute;
+    background-color: var(--main-purple-color);
+    top: 0px;
+    filter: opacity(30%); }
+  main .musicTypesL {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-items: center;
+    margin: 70px 40px 250px 40px; }
+    main .musicTypesL .musicTypeItems {
+      box-shadow: 0px 0px 10px 10px var(--lignt-bk-grey);
+      text-align: center; }
+      main .musicTypesL .musicTypeItems:hover {
+        box-shadow: 0px 0px 5px 3px var(--main-purple-color); }
+      main .musicTypesL .musicTypeItems a {
+        text-decoration: none; }
+      main .musicTypesL .musicTypeItems .mtImage {
+        width: 300px;
+        height: 230px; }
+      main .musicTypesL .musicTypeItems p {
+        margin: 0px;
+        color: var(--main-purple-color);
+        padding: 10px; }
+  main .instrumentsD {
+    background-color: var(--dark-grey-color);
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px auto auto auto;
+    grid-gap: 2px solid;
+    grid-template-areas: "txt txt txt txt" "a a b c" "a a d e" "f f g h";
+    align-items: center;
+    justify-items: center;
+    margin: 70px 0px 110px 0px; }
+    main .instrumentsD .instrumentsDheading {
+      color: #dbdbdb;
+      grid-column: 1 / -1;
+      align-items: center;
+      justify-items: center; }
+    main .instrumentsD .instrumentItems .instrImage {
+      width: 400px; }
+    main .instrumentsD .instrOne {
+      grid-area: a; }
+      main .instrumentsD .instrOne .instrImage {
+        width: 100%;
+        height: 400px; }
+    main .instrumentsD .instrTwo {
+      grid-area: b; }
+      main .instrumentsD .instrTwo .instrImage {
+        width: 100%;
+        height: 200px; }
+    main .instrumentsD .instrThree {
+      grid-area: c; }
+      main .instrumentsD .instrThree .instrImage {
+        width: 100%;
+        height: 200px; }
+    main .instrumentsD .instrFour {
+      grid-area: d; }
+      main .instrumentsD .instrFour .instrImage {
+        width: 100%;
+        height: 200px; }
+    main .instrumentsD .instrFive {
+      grid-area: e;
+      /* e */ }
+      main .instrumentsD .instrFive .instrImage {
+        width: 100%;
+        height: 200px; }
+    main .instrumentsD .instrSix {
+      grid-area: f; }
+      main .instrumentsD .instrSix .instrImage {
+        width: 100%;
+        height: 200px; }
+    main .instrumentsD .instrSeven {
+      grid-area: g; }
+      main .instrumentsD .instrSeven .instrImage {
+        width: 100%;
+        height: 200px; }
+    main .instrumentsD .instrEight {
+      grid-area: h; }
+      main .instrumentsD .instrEight .instrImage {
+        width: 100%;
+        height: 200px; }
+  main .upcomingL {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 70px 0px 200px 0px; }
+    main .upcomingL .upcomingItems .upcomingImage {
+      width: 70%;
+      height: 550px; }
+    main .upcomingL .upimgLeft {
+      float: right; }
+    main .upcomingL .upimgRight {
+      float: left; }
+  main footer {
+    background-color: var(--main-purple-color);
+    color: var(--main-purple-color);
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 70px 0px 0px 0px;
+    grid-gap: 10px; }
+    main footer .footerDivisionOne {
+      display: flex;
+      flex-direction: row;
+      margin-left: 20px;
+      margin-bottom: -2px solid; }
+      main footer .footerDivisionOne .footerSocialLink {
+        background-color: var(--lignt-bk-grey);
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 2px solid;
+        box-sizing: border-box;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        align-self: center;
+        /*flex-end*/
+        transition: all .2s ease-in-out; }
+        main footer .footerDivisionOne .footerSocialLink:hover {
+          background-color: #bcb6b6;
+          color: black; }
+        main footer .footerDivisionOne .footerSocialLink:hover {
+          transform: scale(1.6); }
+      main footer .footerDivisionOne .footerInsta {
+        height: 60px; }
+      main footer .footerDivisionOne .footerTwit {
+        height: 40px; }
+      main footer .footerDivisionOne .footerPin {
+        height: 40px; }
+      main footer .footerDivisionOne .footerFb {
+        height: 20px; }
+      main footer .footerDivisionOne .footerAma {
+        height: 20px; }
+  main .footerDivisionTwo {
+    text-align: center; }
+    main .footerDivisionTwo .footerlogoImage {
+      width: 30px;
+      padding-top: 16px; }
+    main .footerDivisionTwo .footerRightsText {
+      color: #dbdbdb; }
+  main .footerDivisionThree {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    /*align-self:center;*/
+    margin-right: 20px; }
+    main .footerDivisionThree .footerAddr {
+      color: #dbdbdb;
+      align-self: center; }
+  main .text-center {
+    text-align: center; }
+    main .text-center h2 {
+      margin-top: 154px; }
+  main .pageHeading {
+    height: 150px;
+    text-align: center;
+    color: #DBDBDB;
+    padding-top: 50px; }
+  main .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: auto;
+    grid-column-gap: 7em;
+    grid-row-gap: 7em;
+    margin-top: 4em; }
+    main .products .con {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; }
+      main .products .con .col1 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        text-align: right; }
+        main .products .con .col1 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          height: 204px; }
+        main .products .con .col1 h4 {
+          padding-right: 10px; }
+        main .products .con .col1 div p {
+          padding-right: 10px; }
+      main .products .con .col3 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-left: 5%;
+        text-align: right; }
+        main .products .con .col3 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          height: 204px; }
+        main .products .con .col3 h4 {
+          padding-right: 10px; }
+        main .products .con .col3 div p {
+          padding-right: 10px; }
+      main .products .con .col2 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-right: 5%; }
+        main .products .con .col2 a {
+          text-decoration: none; }
+        main .products .con .col2 img {
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 204px; }
+        main .products .con .col2 h4 {
+          padding-left: 10px; }
+        main .products .con .col2 div p {
+          padding-left: 10px; }
+      main .products .con .col4 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px; }
+        main .products .con .col4 img {
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 204px; }
+        main .products .con .col4 h4 {
+          padding-left: 10px; }
+        main .products .con .col4 div p {
+          padding-left: 10px; }
+      main .products .con img {
+        width: 100%; }
+      main .products .con .textSection {
+        background-color: #dbdbdb; }
+        main .products .con .textSection h4 {
+          color: #610032; }
+  main .contactHeading {
+    text-align: center;
+    height: 150px;
+    padding-top: 50px; }
+    main .contactHeading h1 {
+      text-align: center; }
+  main .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
+  main .contactLeft .map {
+    height: 100%; }
+    main .contactLeft .map iframe {
+      border: 0;
+      width: 100%;
+      /*600*/
+      height: 100%; }
+  main .contactRight {
+    background-image: linear-gradient(to right, #480025, #DBDBDB); }
+    main .contactRight form {
+      color: #fff; }
+      main .contactRight form fieldset {
+        border: 0px;
+        padding-left: 10px;
+        /*input[type=checkbox] {
+            transform: scale(1.5);
+        }*/ }
+        main .contactRight form fieldset input {
+          border: 1px solid #610032;
+          border-radius: 7px;
+          color: #610032;
+          height: 25px; }
+          main .contactRight form fieldset input[type=checkbox] {
+            height: 15px; }
+          main .contactRight form fieldset input[type=radio] {
+            height: 15px; }
+        main .contactRight form fieldset label {
+          font-size: 1.5em; }
+        main .contactRight form fieldset textarea {
+          border: 1px solid #610032;
+          color: #610032;
+          border-radius: 7px;
+          margin-left: 20px; }
+        main .contactRight form fieldset select {
+          border: 1px solid #610032;
+          border-radius: 7px;
+          color: #610032;
+          height: 25px; }
+        main .contactRight form fieldset button {
+          border: 1px solid #610032;
+          border-radius: 7px;
+          color: #610032;
+          height: 40px;
+          width: 100px; }
+          main .contactRight form fieldset button:hover {
+            transform: scale(1.1); }
+        main .contactRight form fieldset legend h4 {
+          font-size: 2em; }
+          main .contactRight form fieldset legend h4 i {
+            color: #DBDBDB; }
+        main .contactRight form fieldset span {
+          color: red; }
+  main .videoHeading {
+    text-align: center;
+    height: 150px;
+    padding-top: 120px; }
+    main .videoHeading h1 {
+      text-align: center; }
+  main .video {
+    height: 500px;
+    margin-top: 100px; }
+    main .video iframe {
+      width: 100%;
+      /*560*/
+      height: 100%;
+      /*315*/ }
+  main .proDesHeading {
+    text-align: center;
+    height: 150px;
+    padding-top: 100px; }
+    main .proDesHeading h1 {
+      text-align: center; }
+  main .proDes {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 90%;
+    margin: auto;
+    margin-top: 90px;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px; }
+    main .proDes section .desImage {
+      width: 70%;
+      margin: auto;
+      border-radius: 15px;
+      margin-bottom: 50px; }
+      main .proDes section .desImage img {
+        width: 100%;
+        border-radius: 15px; }
+    main .proDes section .desText p::first-letter {
+      font-size: 1.8em;
+      color: #610032; }
+    main .proDes .desaside h2 {
+      text-align: center; }
+    main .proDes .desaside .collection {
+      text-align: center; }
+    main .proDes .desaside .collectionItems {
+      color: #610032;
+      width: 100%;
+      height: 50px; }
+      main .proDes .desaside .collectionItems .asideSongs span {
+        padding-bottom: 10px; }
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  main header nav ul {
+    display: grid;
+    grid-template-columns: 1fr !important; }
+    main header nav ul li {
+      display: grid;
+      grid-template-columns: 1fr !important; }
+  main .contact {
+    display: grid;
+    grid-template-columns: 1fr; }
+  main .proDes {
+    display: grid;
+    grid-template-columns: 1fr; }
+    main .proDes .desaside {
+      height: 350px;
+      justify-content: center; }
+  main .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px; }
+    main .products .con {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 50px; }
+      main .products .con .col1 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: right; }
+        main .products .con .col1 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 204px; }
+        main .products .con .col1 h4 {
+          padding-right: 10px; }
+        main .products .con .col1 div p {
+          padding-right: 10px; }
+      main .products .con .col3 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-left: 5%;
+        text-align: right;
+        margin-top: 50px; }
+        main .products .con .col3 img {
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 204px; }
+        main .products .con .col3 h4 {
+          padding-right: 10px; }
+        main .products .con .col3 div p {
+          padding-right: 10px; }
+      main .products .con .col2 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-right: 5%; }
+        main .products .con .col2 a {
+          text-decoration: none; }
+        main .products .con .col2 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          height: 204px; }
+        main .products .con .col2 h4 {
+          padding-left: 10px; }
+        main .products .con .col2 div p {
+          padding-left: 10px; }
+      main .products .con .col4 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px; }
+        main .products .con .col4 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          height: 204px; }
+        main .products .con .col4 h4 {
+          padding-left: 10px; }
+        main .products .con .col4 div p {
+          padding-left: 10px; }
+  main .upcomingL {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 70px 0px 0px 0px; }
+    main .upcomingL .upcomingItems {
+      width: 80%;
+      margin: auto; }
+      main .upcomingL .upcomingItems .upcomingImage {
+        width: 100%;
+        height: 550px;
+        margin: auto; }
+  main .musicTypesL {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+    align-items: center;
+    justify-items: center;
+    margin: 70px 40px 150px 40px; } }
+@media only screen and (min-width: 768px) and (max-width: 1049px) {
+  main header nav ul {
+    display: grid;
+    grid-template-columns: 1fr; }
+    main header nav ul li {
+      display: grid;
+      grid-template-columns: 1fr; }
+  main .contact {
+    display: grid;
+    grid-template-columns: 1fr; }
+  main .products {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px; }
+    main .products .con {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-column-gap: 50px; }
+      main .products .con .col1 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        text-align: right; }
+        main .products .con .col1 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 204px; }
+        main .products .con .col1 h4 {
+          padding-right: 10px; }
+        main .products .con .col1 div p {
+          padding-right: 10px; }
+      main .products .con .col3 {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-left: 5%;
+        text-align: right;
+        margin-top: 50px; }
+        main .products .con .col3 img {
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          height: 204px; }
+        main .products .con .col3 h4 {
+          padding-right: 10px; }
+        main .products .con .col3 div p {
+          padding-right: 10px; }
+      main .products .con .col2 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        margin-right: 5%; }
+        main .products .con .col2 a {
+          text-decoration: none; }
+        main .products .con .col2 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          height: 204px; }
+        main .products .con .col2 h4 {
+          padding-left: 10px; }
+        main .products .con .col2 div p {
+          padding-left: 10px; }
+      main .products .con .col4 {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px; }
+        main .products .con .col4 img {
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          height: 204px; }
+        main .products .con .col4 h4 {
+          padding-left: 10px; }
+        main .products .con .col4 div p {
+          padding-left: 10px; }
+  main .upcomingL {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 70px 0px 200px 0px; }
+    main .upcomingL .upcomingItems {
+      width: 60%;
+      margin: auto; }
+      main .upcomingL .upcomingItems .upcomingImage {
+        width: 100%;
+        margin: auto; }
+    main .upcomingL .upimgLeft {
+      clear: both; }
+    main .upcomingL .upimgRight {
+      clear: both; }
+  main .musicTypesL {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 50px;
+    align-items: center;
+    justify-items: center;
+    margin: 70px 40px 150px 40px; } }
+@keyframes slide {
+  0% {
+    left: 0%; }
+  10% {
+    left: -0%; }
+  20% {
+    left: -100%; }
+  30% {
+    left: -100%; }
+  40% {
+    left: -200%; }
+  50% {
+    left: -200%; }
+  60% {
+    left: -300%; }
+  70% {
+    left: -300%; }
+  80% {
+    left: -400%; }
+  90% {
+    left: -400%; }
+  100% {
+    left: 0%; } }
+/*
+#prnt:hover #child1{
+    visibility:hidden;
+}
+*/
+
+/*# sourceMappingURL=main.css.map */

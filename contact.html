@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="assets/icons/tab-logo.png">
+    <title>Music | ContactUs</title>
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <a href="index.html"><li class="navLogo"><img class="logoImage" src="assets/logo/1.png" width="50px"></li></a>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="musicgenres.html"><li>Music genres</li></a>
+                    <!--<a href="catalogue.html"><li>Catlogue</li></a>-->
+                    <a href="contact.html"><li>Contact</li></a>
+                    <li>
+                        <form method="get">
+                            <input type="text">
+                            <button type="submit"><i class="far fa fa-search headersrchIcon"></i></button>
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article class="contactHeading"><h1>Contact Us</h1></article>
+        <article class="contact">
+            <div class="contactLeft">
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.2268941089155!2d-73.55348038458541!3d45.525639479101706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc918e0c061b07f%3A0x647a6b6d7cb681a7!2sISI%2C%20L&#39;institut%20Sup%C3%A9rieur%20d&#39;Informatique!5e0!3m2!1sen!2sca!4v1580353418700!5m2!1sen!2sca"  frameborder="0" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <div class="contactRight">
+                <form method="post">
+                    <fieldset>
+                        <legend><h4><i class="fas fa fa-envelope"></i> Feel free to contact</h4></legend>
+                        <label for="name">Name<span>*</span></label>&nbsp;<input id="name" type="text" name="name" value="" placeholder="Sam" required><br><br>
+                        <label for="email">Email<span>*</span></label>&nbsp;<input id="email" type="email" name="email" value="" placeholder="sam@example.com" required><br><br>
+                        <label for="mobile">Mobile</label>&nbsp;<input id="mobile" type="number" name="mobile" value="" placeholder="+1 514 325 6598"><br><br>    
+                        <label>Gender</label><br>
+                        <input type="radio" id="male" name="gender" value="male">&nbsp;<label for="male">Male</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="female" name="gender" value="female">&nbsp;<label for="female">Female</label><br><br>
+                        <label>Favourite music</label><br>
+                        <input type="checkbox" id="pop" name="pop" value="pop" checked><label for="pop">Pop music&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="jazz" name="jazz" value="jazz"><label for="jazz">Jazz&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="dance" name="dance" value="dance"><label for="dance">Dance music&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                        <label for="dob">DOB&nbsp;</label><input type="date" id="date" name="date" value="date"><br><br>
+                        <label for="how">How you know about us?</label>
+                        <select id="how" name="how">
+                            <option value="friend">By Friend</option>
+                            <option value="internet">By Internet</option>
+                            <option value="other">Other option</option>
+                        </select><br><br>
+                        <label for="msg">Message<span>*</span></label><br>
+                        <textarea id="msg" name="msg" rows="10" cols="60" placeholder="Type message here . . .!" required></textarea><br><br>
+                        <button type="submit"><i class="fas fa fa-check"></i> Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </article>
+        <article class="videoHeading"><h1>Our music Studio</h1></article>
+        <article class="video">
+            <iframe src="https://www.youtube.com/embed/EOEdD7WNGkc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" alternative="video" allowfullscreen></iframe>
+        </article>
+        <footer>
+            <div class="footerDivisionOne">
+                <div class="footerSocialLink footerFb">
+                    <i class="fab fa fa-facebook"></i>
+                </div>
+                <div class="footerSocialLink footerTwit">
+                    <i class="fab fa fa-twitter"></i>
+                </div>
+                <div class="footerSocialLink footerInsta">
+                    <i class="fab fa fa-instagram"></i>
+                </div>
+                <div class="footerSocialLink footerPin">
+                    <i class="fab fa fa-pinterest-p"></i>
+                </div>
+                <div class="footerSocialLink footerAma">
+                    <i class="fab fa fa-amazon"></i>
+                </div>
+                
+            </div>
+            <div class="footerDivisionTwo">
+                <img class="footerlogoImage" src="assets/logo/1.png" width="20px">
+                <p class="footerRightsText">Designed by Abc developers | All rights reserved.</p>
+            </div>
+            <div class="footerDivisionThree">
+                
+                <label class="footerAddr">
+                <i class="far fa fa-map-marker"></i>&nbsp;
+                196 Fallone Dron, Ontario, Canada. H2K 1S1 
+                <br>
+                <i class="far fa fa-mobile"></i>&nbsp;
+                +1 542 875 9865, fallone@coder.com</label>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,942 @@
+@import "variables.css"; /* or using url is @import url("variables.css") */
+@import url('https://fonts.googleapis.com/css?family=Courgette|Montserrat&display=swap');
+body{
+    margin:0px;
+}
+main{
+    font-family: 'Courgette', cursive;
+    //font-family: 'Montserrat', sans-serif;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    header{
+        nav{
+            background-color:var(--main-purple-color);
+            color:var(--text-light-grey);
+            height:100px;
+            grid-column:1 / -1;
+            ul{
+                list-style-type: none;
+                display:grid;
+                grid-template-columns:  repeat(8, 1fr);
+                align-items: center;
+                justify-items:center;
+                margin:0px; /*default padding and margin of ul*/
+                padding:16px 0px 0px 0px;
+                
+                li{
+                    display:inline;
+                    padding:10px 20px;
+                    background-color: var(--lignt-bk-grey);
+                    color: var(--text-purple);
+                            
+                    &:nth-child(5){
+                        grid-column:5 / span 3;
+                    }
+                    &:nth-child(5) form{
+                        width:300px;
+                        background-color: transparent;
+                        button{
+                            background-color:#dbdbdb;
+                            //height:100px;
+                            border:1px solid #610032;
+                            border-radius: 10px;
+                        }
+                    }
+                    &:nth-child(5) form input{
+                        background-color: var(--lignt-bk-grey);
+                        border:0px;
+                        height:35px;
+                        width:200px;
+                        color:#610032;
+                    }
+                    &:nth-child(5) form .headersrchIcon{
+                        color:var(--main-purple-color);
+                        margin-left:20px;
+                        //background-color: var(--lignt-bk-grey);
+                        //padding:10px 20px;
+                    }
+                    &:last-child{
+                        margin-left:10px;
+                    }
+                    &:hover{
+                        background-color: #151515;
+                        color:#fff;
+                    }
+                    &:active{
+                        background-color: #414141;
+                        color:#fff;
+                    }
+                }
+                .navLogo{
+                    background-color: transparent;
+                        .logoImage{
+                            width:50px;
+                            background-color: transparent;
+                        }
+                        &:hover{
+                            background-color: transparent;
+                        }
+                }
+            }
+        }
+    }
+    .bannerD{
+        grid-column:1 / -1;
+        position:relative;
+        animation: slide 10s infinite;
+        width: 500%;
+        /*#prnt{
+            position:fixed;
+            top:200px;
+            right:0px;
+            border-radius: 10px 0px 0px 10px;
+            border-right:0px;
+            //width:200px;
+            #colorIcon{
+                cursor:pointer;
+                color:#2B2D2F;
+            }
+            #child1{
+                height:40px;
+                width:30px;
+                background-color: #084414;
+                border:2px solid  solid #DBDBDB;
+                border-right:0px;
+                border-radius: 10px 0px 0px 10px;
+                cursor:pointer;
+                display:none;
+            }
+            #child2{
+                height:40px;
+                width:30px;
+                background-color:#49323F;
+                border-right:0px;
+                border:2px solid  solid #DBDBDB;
+                border-right:0px;
+                border-radius: 10px 0px 0px 10px;
+                cursor:pointer;
+                display:none;
+            }
+            &:hover #child1, &:hover #child2{
+                display:block;
+            }  
+        }*/
+    }
+    .bannerImage{
+        //width: 100%;
+        width: 20%;
+        height:653px;
+        float:left;
+
+    }
+    .bannreUpperColor{
+        width:100%;
+        height:653px;
+        position:absolute;
+        background-color: var(--main-purple-color);
+        top:0px;
+        filter:opacity(30%);
+    }
+    .musicTypesL{
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items:center;
+        margin:70px 40px 250px 40px;
+        .musicTypeItems{
+            box-shadow:0px 0px 10px 10px var(--lignt-bk-grey);
+            text-align:center;
+            &:hover{
+                box-shadow:0px 0px 5px 3px var(--main-purple-color);
+            }
+            a{
+                text-decoration:none;
+            }
+            .mtImage{
+                width:300px;
+                height:230px;
+            }
+            p{
+                margin: 0px;
+                //background-color: red;
+                color:var(--main-purple-color);
+                padding: 10px;
+            }
+        }
+    }
+    .instrumentsD{
+        background-color: var(--dark-grey-color);
+        grid-column:1 / -1;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 150px auto auto auto;
+        grid-gap:2px solid ;
+        grid-template-areas:
+            "txt txt txt txt"
+            "a a b c"
+            "a a d e"/*a a d d*/
+            "f f g h";
+        align-items: center;
+        justify-items:center;
+        margin:70px 0px 110px 0px;
+        .instrumentsDheading{
+            color:#dbdbdb;
+            grid-column:1 / -1;
+            align-items: center;
+            justify-items:center;
+        }
+        .instrumentItems{
+            .instrImage{
+                width:400px;
+            }
+        }
+        .instrOne{
+            grid-area:a;
+            .instrImage{
+                width:100%;
+                height:400px
+            }
+        }
+        .instrTwo{
+            grid-area:b;
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+        .instrThree{
+            grid-area:c;
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+        .instrFour{
+            grid-area:d;
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+        .instrFive{
+            grid-area:e;/* e */
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+        .instrSix{
+            grid-area:f;
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+        .instrSeven{
+            grid-area:g;
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+        .instrEight{
+            grid-area:h;
+            .instrImage{
+                width:100%;
+                height:200px;
+            }
+        }
+    }
+    .upcomingL{
+        grid-column:1 / -1;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        margin:70px 0px 200px 0px;
+        .upcomingItems{
+            .upcomingImage{
+                //width:500px;
+                width:70%;
+                height:550px;
+            }
+        }
+        .upimgLeft{
+            float:right;
+        }
+        .upimgRight{
+            float:left;
+        }
+    }
+    footer{
+        background-color:var(--main-purple-color);
+        color:var(--main-purple-color);
+        grid-column:1 / -1;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin:70px 0px 0px 0px;
+        grid-gap:10px;
+        .footerDivisionOne{
+            display:flex;
+            flex-direction: row;
+            //margin-top:20px;
+            margin-left:20px;
+            margin-bottom:-2px solid ;
+            .footerSocialLink{
+                background-color:var(--lignt-bk-grey);
+                padding-left:5px;
+                padding-right:5px;
+                margin:2px solid ;
+                box-sizing: border-box;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                align-self: center;/*flex-end*/
+                transition: all .2s ease-in-out;
+                &:hover{
+                    background-color:#bcb6b6;
+                    color:black;
+                }
+                &:hover{
+                    transform: scale(1.6); 
+                }
+            }
+            .footerInsta{
+                height:60px;
+            }
+            .footerTwit {
+                height:40px;
+            }
+            .footerPin{
+                height:40px;
+            }
+            .footerFb {
+                height:20px;
+            }
+            .footerAma{
+                height:20px;
+            }
+        }
+    }
+    .footerDivisionTwo{
+        text-align: center;
+        .footerlogoImage{
+            width:30px;
+            padding-top:16px;
+        }
+        .footerRightsText{
+            color:#dbdbdb;
+        }
+    }
+    .footerDivisionThree{
+        display:flex;
+        flex-direction: row;
+        justify-self:end;
+        /*align-self:center;*/
+        margin-right:20px;
+        .footerAddr{
+            color:#dbdbdb;
+            align-self: center;
+        }
+    }
+    .text-center{
+        text-align:center;
+        h2{
+            margin-top:154px;
+        }
+    }
+    /*start of the design of the musicgenres page*/
+    .pageHeading{
+        height:150px;
+        text-align:center;
+        color:#DBDBDB;
+        padding-top:50px;
+    }
+    .products{
+        display:grid;
+        grid-template-columns: 1fr;
+        width:90%;
+        margin:auto;
+        grid-column-gap:7em;
+        grid-row-gap: 7em;
+        margin-top:4em;
+        .con{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            //margin-top:20px;
+            //margin-bottom:100px;
+            .col1{
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                text-align:right;
+                img{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    //width:250px;
+                    height:204px;
+                }
+                h4{
+                    padding-right:10px;
+                }
+                div{
+                    p{
+                        padding-right:10px;
+                    }
+                }
+            }
+            .col3{
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                margin-left:5%;
+                text-align:right;
+                img{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    //width:250px;
+                    height:204px;
+                }
+                h4{
+                    padding-right:10px;
+                }
+                div{
+                    p{
+                        padding-right:10px;
+                    }
+                }
+            }
+            .col2{
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                margin-right:5%;
+                a{
+                    text-decoration: none;
+                }
+                img{
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    //width:250px;
+                    height:204px;
+                }
+                h4{
+                    padding-left:10px;
+                }
+                div{
+                    p{
+                        padding-left:10px;
+                    }
+                }
+            }
+            .col4{
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                img{
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    //width:250px;
+                    height:204px;
+                }
+                h4{
+                    padding-left:10px;
+                }
+                div{
+                    p{
+                        padding-left:10px;
+                    }
+                }
+            }
+            img{
+                //width:400px;
+                width:100%;
+            }
+            .textSection{
+                background-color:#dbdbdb;
+                h4{
+                    color:#610032;
+                }
+            }
+        }
+    }
+    /*end of the design of the musicgenres page*/
+    /*start of contact page*/
+    .contactHeading{
+        text-align:center;
+        height:150px;
+        padding-top:50px;
+        h1{
+            text-align:center;
+        }
+    }
+    .contact{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        //background-image: linear-gradient(to right, #480025, #DBDBDB);
+    }
+    .contactLeft{
+        .map{
+            height:100%;
+            iframe{
+                border:0;
+                width:100%;/*600*/
+                height:100%;
+            }
+        }
+    }
+    .contactRight{
+        background-image: linear-gradient(to right, #480025, #DBDBDB);
+        form{
+            color:#fff;
+            fieldset{
+                border:0px;
+                padding-left:10px;
+                /*input[type=checkbox] {
+                    transform: scale(1.5);
+                }*/
+                input{
+                    border:1px solid #610032;
+                    border-radius: 7px;
+                    color:#610032;
+                    //width:200px;
+                    height:25px;
+                    &[type=checkbox] {
+                        height:15px;
+                    }
+                    &[type=radio] {
+                        height:15px;
+                    }
+                }
+                label{
+                    font-size:1.5em;
+                }
+                textarea{
+                    border:1px solid #610032;
+                    color:#610032;
+                    border-radius: 7px;
+                    margin-left:20px;
+                }
+                select{
+                    border:1px solid #610032;
+                    border-radius: 7px;
+                    color:#610032;
+                    height:25px;
+                }
+                button{
+                    border:1px solid #610032;
+                    border-radius: 7px;
+                    color:#610032;
+                    height:40px;
+                    width:100px;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                legend{
+                    h4{
+                        font-size:2em;
+                        i{
+                            color:#DBDBDB;
+                        }
+                    }
+                }
+                span{
+                    color:red;
+                }
+            }
+        }
+    }
+    .videoHeading{
+        text-align:center;
+        height:150px;
+        padding-top:120px;
+        h1{
+            text-align:center;
+        }
+    }
+    .video{
+        height:500px;
+        margin-top:100px;
+        iframe{
+            width:100%;/*560*/
+            height:100%;/*315*/
+        }
+    }
+    /*end of contact page*/
+    /*start of prduct description*/
+    .proDesHeading{
+        text-align:center;
+        height:150px;
+        padding-top:100px;
+        h1{
+            text-align:center;
+        }
+    }
+    .proDes{
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+        width:90%;
+        margin:auto;
+        margin-top:90px;
+        grid-column-gap: 25px;
+        grid-row-gap: 20px;
+        section{
+            .desImage{
+                //width:500px;
+                width:70%;
+                margin:auto;
+                border-radius: 15px;
+                margin-bottom:50px;
+                img{
+                    width:100%;
+                    border-radius: 15px;
+                }
+            }
+            .desText{
+                p::first-letter{
+                    font-size: 1.8em;
+                    color: #610032;
+                }
+            }
+        }
+        .desaside{
+            h2{
+                text-align:center;
+            }
+            .collection{
+                text-align:center;
+            }
+            .collectionItems{
+                color:#610032;
+                width:100%;
+                height:50px;
+                //display:none;
+                .asideSongs{
+                    span{
+                        padding-bottom:10px;
+                    }
+                }
+            }
+        }
+        
+    }
+    /*end of prduct description*/
+}
+@media only screen 
+    and (min-width: 480px) 
+    and (max-width: 767px){ 
+    main{
+        header{
+            nav{
+                ul{
+                    display:grid;
+                    grid-template-columns: 1fr !important;
+                    li{
+                        display:grid;
+                        grid-template-columns: 1fr !important;
+                    }
+                }
+            }
+        }
+        .contact{
+            display:grid;
+            grid-template-columns: 1fr;
+        }
+        .proDes{
+            display:grid;
+            grid-template-columns: 1fr;
+            .desaside{
+                height:350px;
+                //text-align:center;
+                justify-content:center;
+            }
+        }
+        .products{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-gap:50px;
+            .con{
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-column-gap: 50px;
+                .col1{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    text-align:right;
+                    img{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        //width:250px;
+                        height:204px;
+                    }
+                    h4{
+                        padding-right:10px;
+                    }
+                    div{
+                        p{
+                            padding-right:10px;
+                        }
+                    }
+                }
+                .col3{
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    margin-left:5%;
+                    text-align:right;
+                    margin-top:50px;
+                    img{
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        //width:250px;
+                        height:204px;
+                    }
+                    h4{
+                        padding-right:10px;
+                    }
+                    div{
+                        p{
+                            padding-right:10px;
+                        }
+                    }
+                }
+                .col2{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    margin-right:5%;
+                    a{
+                        text-decoration: none;
+                    }
+                    img{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        //width:250px;
+                        height:204px;
+                    }
+                    h4{
+                        padding-left:10px;
+                    }
+                    div{
+                        p{
+                            padding-left:10px;
+                        }
+                    }
+                }
+                .col4{
+                    border-top-left-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                    img{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        //width:250px;
+                        height:204px;
+                    }
+                    h4{
+                        padding-left:10px;
+                    }
+                    div{
+                        p{
+                            padding-left:10px;
+                        }
+                    }
+                }
+            }
+        }
+        .upcomingL{
+            grid-column:1 / -1;
+            display:grid;
+            grid-template-columns: 1fr;
+            margin:70px 0px 0px 0px;
+            .upcomingItems{
+                width:80%;
+                margin:auto;
+                .upcomingImage{
+                    //width:500px;
+                    width:100%;
+                    height:550px;
+                    margin:auto;
+                }
+            }
+            .upimgLeft{
+                //float:right;
+            }
+            .upimgRight{
+                //float:left;
+            }
+        }
+        .musicTypesL{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 50px;
+            align-items: center;
+            justify-items:center;
+            margin:70px 40px 150px 40px;
+        }
+    }
+}
+@media only screen 
+    and (min-width: 768px) 
+    and (max-width: 1049px){
+        main{
+            header{
+                nav{
+                    ul{
+                        display:grid;
+                        grid-template-columns: 1fr;
+                        li{
+                            display:grid;
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                }
+            }
+            .contact{
+                display:grid;
+                grid-template-columns: 1fr;
+            }
+            .products{
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-gap:50px;
+                .con{
+                    display:grid;
+                    grid-template-columns: 1fr;
+                    grid-column-gap: 50px;
+                    .col1{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        text-align:right;
+                        img{
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            //width:250px;
+                            height:204px;
+                        }
+                        h4{
+                            padding-right:10px;
+                        }
+                        div{
+                            p{
+                                padding-right:10px;
+                            }
+                        }
+                    }
+                    .col3{
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                        margin-left:5%;
+                        text-align:right;
+                        margin-top:50px;
+                        img{
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            //width:250px;
+                            height:204px;
+                        }
+                        h4{
+                            padding-right:10px;
+                        }
+                        div{
+                            p{
+                                padding-right:10px;
+                            }
+                        }
+                    }
+                    .col2{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        margin-right:5%;
+                        a{
+                            text-decoration: none;
+                        }
+                        img{
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                            //width:250px;
+                            height:204px;
+                        }
+                        h4{
+                            padding-left:10px;
+                        }
+                        div{
+                            p{
+                                padding-left:10px;
+                            }
+                        }
+                    }
+                    .col4{
+                        border-top-left-radius: 20px;
+                        border-bottom-left-radius: 20px;
+                        img{
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                            //width:250px;
+                            height:204px;
+                        }
+                        h4{
+                            padding-left:10px;
+                        }
+                        div{
+                            p{
+                                padding-left:10px;
+                            }
+                        }
+                    }
+                }
+            }
+            .upcomingL{
+                grid-column:1 / -1;
+                display:grid;
+                grid-template-columns: 1fr;
+                margin:70px 0px 200px 0px;
+                .upcomingItems{
+                    width:60%;
+                    margin:auto;
+                    .upcomingImage{
+                        //width:500px;
+                        width:100%;
+                        //height:550px;
+                       margin:auto;
+                    }
+                }
+                .upimgLeft{
+                    clear:both;
+                }
+                .upimgRight{
+                    clear:both;
+                }
+            }
+            .musicTypesL{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                grid-row-gap: 50px;
+                align-items: center;
+                justify-items:center;
+                margin:70px 40px 150px 40px;
+            }
+        }
+}
+@keyframes slide{
+    0% { left: 0%; }
+    10% { left: -0%; }
+    20% { left: -100%; }
+    30% { left: -100%; }
+    40% { left: -200%; }
+    50% { left: -200%; }
+    60% { left: -300%; }
+    70% { left: -300%; }
+    80% { left: -400%; }
+    90% { left: -400%; }
+    100% { left: 0%; }
+}
+
+/*
+#prnt:hover #child1{
+    visibility:hidden;
+}
+*/
+
+
